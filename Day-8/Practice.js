@@ -56,3 +56,81 @@ function isItTruthy(input) {
 
 console.log(isItTruthy(true));
 console.log(isItTruthy(false));
+
+/*
+Perform the following mathematical operations on the provided variables a and b:
+
+1.Add
+2.Subtract
+3.Multiply
+4.Divide
+5.Increment
+6.Decrement
+7.Reminder
+*/
+
+const a = 18;
+const b = 24;
+
+// Addition of two values
+
+function add() {
+  const result = a + b;
+  return result;
+}
+
+console.log("Add:", add());
+
+// Subtract small value from larger one
+
+function sub() {
+  const result = b - a;
+  return result;
+}
+
+console.log("Sub:", sub());
+
+// Multiply two values
+
+function mul() {
+  const result = a * b;
+  return result;
+}
+
+console.log("Mul:", mul());
+
+// Divide larger value by small
+
+function div() {
+  const result = b / a;
+  return result;
+}
+
+console.log("Div:", div());
+
+// Increase value of a by 1
+
+function Increase() {
+  let result = a;
+  return (result += 1);
+}
+
+console.log("Increment:", Increase());
+
+// Decrease value of b by 1
+
+function Decrease() {
+  let result = b;
+  return (result -= 1);
+}
+
+console.log("Decrement:", Decrease());
+
+// Divide larger value by small to find the reminder
+
+function reminder() {
+  const result = b % a;
+  return result;
+}
+
+console.log("Reminder:", reminder());
