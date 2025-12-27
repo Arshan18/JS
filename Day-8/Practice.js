@@ -58,7 +58,7 @@ console.log(isItTruthy(true));
 console.log(isItTruthy(false));
 
 /*
-Perform the following mathematical operations on the provided variables a and b:
+Perform the following mathematical operations on the provided variables a = 18 and b = 24:
 
 1.Add
 2.Subtract
@@ -134,3 +134,41 @@ function reminder() {
 }
 
 console.log("Reminder:", reminder());
+
+// Write a function filterNumbers(arr) that returns only numbers from a mixed array
+
+function filterNumbers(arr) {
+  return arr.filter((item) => typeof item === "number");
+}
+
+console.log(filterNumbers([1, "arrshan", 2, "attar"]));
+
+// Write a function reverseArray(arr) that reverses the array
+
+function reverseArray(arr) {
+  return arr.reverse();
+}
+console.log(reverseArray([1, 2, 4, 3, 5]));
+
+// Write a function findMax(arr) that returns the largest number in the array
+
+function findMax(arr) {
+  return Math.max(...arr);
+}
+
+console.log(findMax([18, 45, 25, 17]));
+
+// Write a function removeDuplicates(arr) that returns a new array with all duplicates removed
+
+function removeDuplicates(arr) {
+  return [...new Set(arr)];
+}
+console.log(removeDuplicates([1, 2, 2, 3, 4, 4, 5, 5, 18]));
+
+// Write a function flattenArray(arr) that takes a nested array and returns a single flattened array
+
+function flattenArray(arr) {
+  return arr.flat(Infinity);
+}
+
+console.log(flattenArray(["Arshan", [18, 20], ["Attar"], [2005]]));
