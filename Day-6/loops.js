@@ -78,3 +78,13 @@ for (let c = 0; c < cities.length; c++) {
   cityList.push(myCity);
 }
 console.log(cityList);
+
+function sumOfN(n) {
+  let sum = 0;
+
+  for (let i = 0; i < length; i++) {
+    sum += i;
+  }
+  return sum;
+}
+console.log(sumOfN(15));
