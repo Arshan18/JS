@@ -243,3 +243,25 @@ const findLongestWord = (arr) =>
     ""
   );
 console.log(findLongestWord(["javascript", "python", "java"]));
+
+// Create an object person with a method introduce() that uses this and additionally add properties of name & age that will result in Hi, my name is Hitesh and I am 19.5 years old on calling introduce()
+
+const person = {
+  name: "Arshan",
+  age: 20,
+  introduce() {
+    return `Hi, my name is ${this.name} and I am ${this.age} years old`;
+  },
+};
+console.log(person.introduce());
+
+// Write a function outer() that contains another function inner() and returns a value of 'Inner function called' on calling outer()
+
+function outer() {
+  function inner() {
+    return "inner function called";
+  }
+  return inner();
+}
+
+console.log(outer());
