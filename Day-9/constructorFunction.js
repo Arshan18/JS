@@ -32,12 +32,12 @@ function Bird(species) {
   this.species = species;
 }
 
-Bird.prototype.sound = function () {
+Bird.prototype.describe = function () {
   return `${this.species} makes a sound`;
 };
 
 let myBird = new Bird("Parrot");
-console.log(myBird.sound());
+console.log(myBird.describe());
 
 function Drink(name) {
   if (!new.target) {
