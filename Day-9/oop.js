@@ -7,7 +7,7 @@ let car = {
   },
 };
 
-console.log(car.start());
+// console.log(car.start());
 
 function School(name, scheme) {
   this.name = name;
@@ -15,7 +15,7 @@ function School(name, scheme) {
 }
 
 let mySchool = new School("MGVD", "Goverment");
-console.log(mySchool);
+// console.log(mySchool);
 
 function Animal(type) {
   this.type = type;
@@ -26,16 +26,16 @@ Animal.prototype.speak = function () {
 };
 
 let myAnimal = new Animal("Cat");
-console.log(myAnimal.speak());
+// console.log(myAnimal.speak());
 
 Array.prototype.Arshan = function () {
   return `Custom method ${this}`;
 };
 
 let myArray = [1, 2, 3];
-console.log(myArray.Arshan());
+// console.log(myArray.Arshan());
 let myNewArray = [1, 2, 3, 4, 5, 6];
-console.log(myNewArray.Arshan());
+// console.log(myNewArray.Arshan());
 
 class Cricket {
   constructor(format, best) {
@@ -47,6 +47,7 @@ class Cricket {
   }
 }
 
+// Inheritance
 class Students extends Cricket {
   learn() {
     return `Students learns form ${this.best}.`;
@@ -54,8 +55,50 @@ class Students extends Cricket {
 }
 
 let newStudent = new Students("Test", "Virat Kohli");
-console.log(newStudent.start());
-console.log(newStudent.learn());
+// console.log(newStudent.start());
+// console.log(newStudent.learn());
 
 let sport = new Cricket("ODI", "Virat Kohli");
-console.log(sport.start());
+// console.log(sport.start());
+
+// Encapsulation
+
+class BankAccount {
+  #balance = 0;
+
+  deposit(amount) {
+    this.#balance += amount;
+    return this.#balance;
+  }
+
+  getBalance() {
+    return `$ ${this.#balance}`;
+  }
+}
+
+let account = new BankAccount();
+account.deposit(500);
+// console.log(account.getBalance());
+
+// Abstraction
+
+class CoffeeMachine {
+  start() {
+    // call db
+    return `Starting the machine...`;
+  }
+
+  brewCoffee() {
+    // abc
+    return `Brewing the coffee`;
+  }
+
+  pressStartButton() {
+    let msg1 = this.start();
+    let msg2 = this.brewCoffee();
+    return `${msg1} + ${msg2}`;
+  }
+}
+
+let myMachine = new CoffeeMachine();
+console.log(myMachine.pressStartButton());
