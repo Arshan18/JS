@@ -101,4 +101,37 @@ class CoffeeMachine {
 }
 
 let myMachine = new CoffeeMachine();
-console.log(myMachine.pressStartButton());
+// console.log(myMachine.start());
+// console.log(myMachine.brewCoffee());
+// console.log(myMachine.pressStartButton());
+
+// Polymorphism
+
+class Bird {
+  fly() {
+    return `Flying...`;
+  }
+}
+
+class Penguin {
+  fly() {
+    return `Penguin can't fly`;
+  }
+}
+
+let myBird = new Bird();
+let myPenguin = new Penguin();
+// console.log(myBird.fly());
+// console.log(myPenguin.fly());
+
+// Static Method
+
+class Calculator {
+  static add(a, b) {
+    return a + b;
+  }
+}
+
+// let basicCalc = new Calculator(1, 8);
+// console.log(basicCalc.add());
+console.log(Calculator.add(1, 8));
