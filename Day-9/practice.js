@@ -78,6 +78,10 @@ class Vehicle {
   move() {
     return `The vehicle is moving`;
   }
+
+  static isVehicle(obj) {
+    return obj instanceof Vehicle;
+  }
 }
 
 class Car extends Vehicle {
@@ -91,6 +95,9 @@ class Car extends Vehicle {
 }
 
 let myCar = new Car("BMW", "M4");
-console.log(myCar.getDetails());
-console.log(myCar.startEngine());
-console.log(myCar.move());
+let randomobj = { Make: "Test", Model: "Obj" };
+// console.log(myCar.getDetails());
+// console.log(myCar.startEngine());
+// console.log(myCar.move());
+console.log(Vehicle.isVehicle(myCar));
+console.log(Vehicle.isVehicle(randomobj));
