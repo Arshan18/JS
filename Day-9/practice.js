@@ -74,13 +74,23 @@ class Vehicle {
   getDetails() {
     return `Make: ${this.make}, Model: ${this.model}`;
   }
+
+  move() {
+    return `The vehicle is moving`;
+  }
 }
 
 class Car extends Vehicle {
   startEngine() {
     return `Engine started`;
   }
+
+  move() {
+    return `The car is driving`;
+  }
 }
 
 let myCar = new Car("BMW", "M4");
-console.log(myCar);
+console.log(myCar.getDetails());
+console.log(myCar.startEngine());
+console.log(myCar.move());
