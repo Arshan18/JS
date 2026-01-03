@@ -134,4 +134,35 @@ class Calculator {
 
 // let basicCalc = new Calculator(1, 8);
 // console.log(basicCalc.add());
-console.log(Calculator.add(1, 8));
+// console.log(Calculator.add(1, 8));
+
+// Getters and Setters
+
+class Employee {
+  #salary;
+
+  constructor(name, salary) {
+    if (salary < 0) {
+      throw new Error("Salary cannot be in negative");
+    }
+
+    this.name = name;
+    this.#salary = salary;
+  }
+
+  get salary() {
+    return `You are not allowed to see the salary.`;
+  }
+
+  set salary(value) {
+    if (value < 0) {
+      console.error("Invalid salary");
+    } else {
+      this._salary = value;
+    }
+  }
+}
+
+let emp = new Employee("Arshan", -50000);
+console.log(emp._salary);
+emp.salary = 69000;
