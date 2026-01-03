@@ -29,10 +29,19 @@ let myDog = new Dog("Mammal");
 // console.log(myDog.bark());
 
 /*
-2.Create a functional constructor Person that takes name and age as parameters. Add a method greet() to the constructor that returns "Hello, my name is [name] and i am [age] years old.".
+2.
+Task-2
+Create a functional constructor Person that takes name and age as parameters. Add a method greet() to the constructor that returns "Hello, my name is [name] and i am [age] years old.".
 */
-
+/*
+Task-2
+Modify the Person constructor to throw an error if the age is not a positive number.
+*/
 function Person(name, age) {
+  if (age <= 0) {
+    throw new Error("Age must be a positive number");
+  }
+
   this.name = name;
   this.age = age;
 
@@ -41,5 +50,9 @@ function Person(name, age) {
   };
 }
 
-let person1 = new Person("Arshan", 20);
+let person1 = new Person("Arshan", -20);
 console.log(person1.greet());
+
+/*
+Modify the Person constructor to throw an error if the age is not a positive number.
+*/
