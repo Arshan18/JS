@@ -103,7 +103,7 @@ let randomobj = { Make: "Test", Model: "Obj" };
 // console.log(Vehicle.isVehicle(randomobj));
 
 /*
-3.
+4.
 Create a class BankAccount with a private property _balance. Add methods deposit(amount) and withdraw(amount). Use getters and setters to access and modify the _balance while ensuring the balance never goes negative.
 */
 
@@ -144,5 +144,51 @@ class BankAccount {
 }
 
 let amount = new BankAccount();
-console.log(amount.deposit(1000));
-console.log(amount.withdraw(100));
+// console.log(amount.deposit(1000));
+// console.log(amount.withdraw(100));
+
+/*
+5.
+Create a class Shape with a method area() that returns 0. Create two subclasses Circle and Rectangle that override the area() method to calculate the area of a circle and a rectangle, respectively.
+*/
+
+class Shape {
+  area() {
+    return 0;
+  }
+}
+
+class Circle extends Shape {
+  constructor(radius) {
+    super();
+    this.radius = radius;
+  }
+
+  area() {
+    return Math.PI * this.radius * this.radius;
+  }
+}
+
+class Rectangle extends Shape {
+  constructor(length, width) {
+    super();
+    this.length = length;
+    this.width = width;
+  }
+
+  area() {
+    return this.length * this.width;
+  }
+}
+
+let circle = new Circle(5);
+let rectangle = new Rectangle(10, 8);
+
+console.log(circle.area());
+console.log(rectangle.area());
+
+class Shape {
+  area() {
+    return 0;
+  }
+}
