@@ -163,6 +163,18 @@ class Employee {
   }
 }
 
-let emp = new Employee("Arshan", -50000);
-console.log(emp._salary);
+let emp = new Employee("Arshan", 50000);
+// console.log(emp._salary);
 emp.salary = 69000;
+
+const Person = {
+  name: "Arshan",
+  age: 20,
+  hobby: ["Cricket", "Gaming"],
+
+  get headline() {
+    return `${this.name} is a ${this.age} years old boy and is mainly hobby in ${this.hobby[0]} `;
+  },
+};
+
+console.log(Person.headline);
