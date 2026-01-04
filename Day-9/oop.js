@@ -177,11 +177,20 @@ const Person = {
   },
 
   set primaryInterest(val) {
-    console.log("Setting Primary interest...");
+    // console.log("Setting Primary interest...");
     this.hobby.unshift(val);
   },
 };
 
-console.log(Person.headline);
+// console.log(Person.headline);
 Person.primaryInterest = "WWE";
-console.log(Person.headline);
+// console.log(Person.headline);
+
+class Individual {
+  constructor(name) {
+    this.name = name;
+  }
+}
+
+let person = new Individual("Saniya");
+console.log(person.name);
