@@ -190,6 +190,17 @@ class Individual {
   constructor(name) {
     this.name = name;
   }
+
+  set name(value) {
+    if (value.length >= 10) {
+      throw new Error("Invalid Name");
+    }
+    this._name = value;
+  }
+
+  get name() {
+    return this._name.toUpperCase();
+  }
 }
 
 let person = new Individual("Saniya");
