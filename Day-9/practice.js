@@ -99,5 +99,50 @@ let randomobj = { Make: "Test", Model: "Obj" };
 // console.log(myCar.getDetails());
 // console.log(myCar.startEngine());
 // console.log(myCar.move());
-console.log(Vehicle.isVehicle(myCar));
-console.log(Vehicle.isVehicle(randomobj));
+// console.log(Vehicle.isVehicle(myCar));
+// console.log(Vehicle.isVehicle(randomobj));
+
+/*
+3.
+Create a class BankAccount with a private property _balance. Add methods deposit(amount) and withdraw(amount). Use getters and setters to access and modify the _balance while ensuring the balance never goes negative.
+*/
+
+class BankAccount {
+  constructor() {
+    this._balance = 0;
+  }
+
+  get balance() {
+    return this._balance;
+  }
+
+  set balance(amount) {
+    if (amount < 0) {
+      throw new Error("Balance cannot be negative");
+    }
+    this._balance = amount;
+  }
+
+  deposit(amount) {
+    if (amount <= 0) {
+      throw new Error("Deposit amount must be positive");
+    }
+    this._balance += amount;
+    return `The Balance is ${this._balance}.`;
+  }
+
+  withdraw(amount) {
+    if (amount <= 0) {
+      throw new Error("Withdraw amount must be positive");
+    }
+    if (amount > this.balance) {
+      throw new Error("Insufficient Balance");
+    }
+    this._balance -= amount;
+    return `The Balance is ${this._balance}.`;
+  }
+}
+
+let amount = new BankAccount();
+console.log(amount.deposit(1000));
+console.log(amount.withdraw(100));
