@@ -165,7 +165,7 @@ class Circle extends Shape {
   }
 
   area() {
-    return Math.PI * this.radius * this.radius;
+    return `The area of circle is: ${Math.PI * this.radius * this.radius}.`;
   }
 }
 
@@ -177,7 +177,7 @@ class Rectangle extends Shape {
   }
 
   area() {
-    return this.length * this.width;
+    return `The area of rectangle is: ${this.length * this.width}`;
   }
 }
 
@@ -186,9 +186,3 @@ let rectangle = new Rectangle(10, 8);
 
 console.log(circle.area());
 console.log(rectangle.area());
-
-class Shape {
-  area() {
-    return 0;
-  }
-}
