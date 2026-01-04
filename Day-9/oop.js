@@ -173,8 +173,15 @@ const Person = {
   hobby: ["Cricket", "Gaming"],
 
   get headline() {
-    return `${this.name} is a ${this.age} years old boy and is mainly hobby in ${this.hobby[0]} `;
+    return `${this.name} is a ${this.age} years old boy and is mainly hobby in ${this.hobby[1]} `;
+  },
+
+  set primaryInterest(val) {
+    console.log("Setting Primary interest...");
+    this.hobby.unshift(val);
   },
 };
 
+console.log(Person.headline);
+Person.primaryInterest = "WWE";
 console.log(Person.headline);
