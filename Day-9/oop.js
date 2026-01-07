@@ -205,3 +205,38 @@ class Individual {
 
 let person = new Individual("Saniya");
 console.log(person.name);
+
+/*
+Create an Employee class that inherits from Person and adds salary.
+*/
+
+class Person1{
+  constructor(name, age, ){
+    this.name = name
+    this.age = age
+  }
+
+  greet(){
+    console.log(`Hi, my name is ${this.name} and I am ${this.age} years old`);
+    
+  }
+}
+class Employeee extends Person1{
+  constructor (name, age, salary){
+    super(name, age)
+    this._salary = salary 
+  }
+  
+  get salary(){
+    return this._salary    
+  }
+
+  getSalary(){
+    console.log(`Salary: ${this._salary}`);
+    
+  }
+}
+
+const Emp = new Employeee("Arshan", 20, 50000)
+Emp.greet()
+Emp.getSalary()
