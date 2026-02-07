@@ -184,5 +184,5 @@ class Rectangle extends Shape {
 let circle = new Circle(5);
 let rectangle = new Rectangle(10, 8);
 
-console.log(circle.area());
-console.log(rectangle.area());
+// console.log(circle.area());
+// console.log(rectangle.area());

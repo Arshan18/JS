@@ -1,90 +1,103 @@
-/*
-1. Write a 'while' loop that calculates the sum of all numbers from 1 to 5 and stores the result in a variable name 'sum'.
-*/
+// /*
+// 1. Write a 'while' loop that calculates the sum of all numbers from 1 to 5 and stores the result in a variable name 'sum'.
+// */
 
-let sum = 0;
-let i = 1;
+// let sum = 0;
+// let i = 1;
 
-while (i <= 5) {
-  sum = sum + i;
-  i++;
-}
+// while (i <= 5) {
+//   sum = sum + i;
+//   i++;
+// }
 
-console.log(sum);
+// console.log(sum);
 
-/*
-2.Write a 'while' loop that counts down fromm 5 to 1 and stores the numbers in an array name 'countdown'.
-*/
+// /*
+// 2.Write a 'while' loop that counts down fromm 5 to 1 and stores the numbers in an array name 'countdown'.
+// */
 
-let countdown = [];
-let j = 5;
+// let countdown = [];
+// let j = 5;
 
-while (j >= 1) {
-  countdown.push(j);
-  j--;
-}
-console.log(countdown);
+// while (j >= 1) {
+//   countdown.push(j);
+//   j--;
+// }
+// console.log(countdown);
 
-/*
-3. Write a `do while` loop that adds prompts a user to enter their favorite tea types untill they enter `"stop"`.
-  Store each tea type in an array named `teaCollection`.
-*/
+// /*
+// 3. Write a `do while` loop that adds prompts a user to enter their favorite tea types untill they enter `"stop"`.
+//   Store each tea type in an array named `teaCollection`.
+// */
 
-// let teaCollection = [];
-// let tea;
+// // let teaCollection = [];
+// // let tea;
+// // do {
+// //   // tea = prompt(`"Enter your favourite tea (type "stop" to finish)`);
+
+// //   if (tea !== "stop") {
+// //     teaCollection.push(tea);
+// //   }
+// // } while (tea !== "stop");
+
+// /*
+// 4.Write a `do while` loop that add number from 1 to 3 and stores the result in a variable named `"total"`.
+// */
+
+// let total = 0;
+// let k = 1;
 // do {
-//   // tea = prompt(`"Enter your favourite tea (type "stop" to finish)`);
+//   total += k;
+//   k++;
+// } while (k <= 3);
+// console.log(total);
 
-//   if (tea !== "stop") {
-//     teaCollection.push(tea);
-//   }
-// } while (tea !== "stop");
+// /*
+// 5.Write a `for` loop that multiplies each element in the array `[2, 4, 6]` by 2 and stores the results in a new array named `mutipliedNumbers`.
+// */
 
-/*
-4.Write a `do while` loop that add number from 1 to 3 and stores the result in a variable named `"total"`.
-*/
+// let mutipliedNumbers = [];
+// let numbers = [2, 4, 6];
 
-let total = 0;
-let k = 1;
-do {
-  total += k;
-  k++;
-} while (k <= 3);
-console.log(total);
+// for (let l = 0; l < numbers.length; l++) {
+//   takeNumber = numbers[l] * 2;
+//   mutipliedNumbers.push(takeNumber);
 
-/*
-5.Write a `for` loop that multiplies each element in the array `[2, 4, 6]` by 2 and stores the results in a new array named `mutipliedNumbers`.
-*/
+//   // mutipliedNumbers.push(numbers[l] * 2)
+// }
+// console.log(mutipliedNumbers);
 
-let mutipliedNumbers = [];
-let numbers = [2, 4, 6];
+// /*Write a `for` loop that list all the cities in the array `["Paris", "New York", "Tokyo", "London"]` and stores each city in a new array named `cityList`.
+//  */
 
-for (let l = 0; l < numbers.length; l++) {
-  takeNumber = numbers[l] * 2;
-  mutipliedNumbers.push(takeNumber);
+// let cities = ["Paris", "New York", "Mumbai", "London"];
+// let cityList = [];
 
-  // mutipliedNumbers.push(numbers[l] * 2)
-}
-console.log(mutipliedNumbers);
-
-/*Write a `for` loop that list all the cities in the array `["Paris", "New York", "Tokyo", "London"]` and stores each city in a new array named `cityList`.
- */
-
-let cities = ["Paris", "New York", "Mumbai", "London"];
-let cityList = [];
-
-for (let c = 0; c < cities.length; c++) {
-  const myCity = cities[c];
-  cityList.push(myCity);
-}
-console.log(cityList);
+// for (let c = 0; c < cities.length; c++) {
+//   const myCity = cities[c];
+//   cityList.push(myCity);
+// }
+// console.log(cityList);
 
 function sumOfN(n) {
   let sum = 0;
 
-  for (let i = 0; i < length; i++) {
+  for (let i = 1; i <= n; i++) {
     sum += i;
   }
   return sum;
 }
 console.log(sumOfN(15));
+
+function printMultiplicationTable(n) {
+  let table = [];
+
+  for (let i = 0; i <= 10; i++) {
+    table.push(`${n} * ${i} = ${n * i}`);
+  }
+  return table;
+}
+
+console.log(printMultiplicationTable(2));
+
+function countVowels()

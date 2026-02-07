@@ -263,5 +263,4 @@ function outer() {
   }
   return inner();
 }
-
 console.log(outer());

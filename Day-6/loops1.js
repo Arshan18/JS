@@ -12,7 +12,7 @@ for (let i = 0; i < teas.length; i++) {
   }
   selectedTeas.push(teas[i]);
 }
-// console.log(selectedTeas);
+console.log(selectedTeas);
 
 /*
 2. Write a `for` loop through the array `["London", "New York","Paris", "Berlin"]` and skips `"Paris"`.
@@ -28,7 +28,7 @@ for (let j = 0; j < cities.length; j++) {
   }
   visitedCities.push(cities[j]);
 }
-// console.log(visitedCities);
+console.log(visitedCities);
 
 /*
 3. Use a `for-of` loop to iterate through thee array `[1, 2, 3, 4, 5]` and stop when the number `4` is found . 
@@ -44,7 +44,7 @@ for (const num of numbers) {
   }
   smallNumbers.push(num);
 }
-// console.log(smallNumbers);
+console.log(smallNumbers);
 
 /*
 4. Write a `for-of` loop ti iterate through the array `["chai", "green tea", "herbal tea", "black tea"]` and skips `"herbal tea"`.
@@ -60,7 +60,7 @@ for (const skips of teasList) {
   }
   prefferedTeas.push(skips);
 }
-// console.log(prefferedTeas);
+console.log(prefferedTeas);
 
 /*
 5.Use a `for-in` loop to loop through an object cataining city populationns.
@@ -89,7 +89,7 @@ for (const city in citiesPopulation) {
   }
   cityNewPopulations[city] = citiesPopulation[city];
 }
-// console.log(cityNewPopulations);
+console.log(cityNewPopulations);
 
 /*
 6. Use a `for-in` loop to loop through an object containing city populations.
@@ -118,7 +118,7 @@ for (const worldCity in worldCities) {
   }
   largeCities[worldCity] = worldCities[worldCity];
 }
-// console.log(largeCities);
+console.log(largeCities);
 
 /*
 7. Write a `forEach` loop that iterates through the array `["earl  grey", "green tea", "chai", "oolong tea"]`.
@@ -134,7 +134,7 @@ teaType.forEach(function (tea) {
   }
   availabeTeas.push(tea);
 });
-// console.log(availabeTeas);
+console.log(availabeTeas);
 
 /*
 8. Write a `foorEach` loop  that iterates through tha array `["Berlin", "Tokyo", "Sydney", "Paris"]`.
