@@ -78,3 +78,12 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("domStatus").textContent =
     "DOM fully loaded at this time";
 });
+
+//Example 10
+
+document
+  .getElementById("toggleHighlight")
+  .addEventListener("click", function () {
+    let descriptionText = document.getElementById("descriptionText");
+    descriptionText.classList.add("highlight");
+  });
