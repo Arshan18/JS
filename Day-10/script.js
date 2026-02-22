@@ -65,5 +65,9 @@ document.getElementById("teaList").addEventListener("click", function (event) {
 document
   .getElementById("feedbackForm")
   .addEventListener("submit", function (event) {
-    alert("submitted!");
+    event.preventDefault();
+    let feedback = document.getElementById("feedbackInput").value;
+    console.log(feedback);
+    document.getElementById("feedbackDisplay").textContent =
+      `Feedback is: ${feedback}`;
   });
