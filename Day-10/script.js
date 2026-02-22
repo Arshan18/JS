@@ -51,3 +51,19 @@ document
   .addEventListener("dblclick", function () {
     alert("AshGaming");
   });
+
+//Example 7
+
+document.getElementById("teaList").addEventListener("click", function (event) {
+  if (event.target && event.target.matches(".teaItem")) {
+    alert("You Selected: " + event.target.textContent);
+  }
+});
+
+//Example 8
+
+document
+  .getElementById("feedbackForm")
+  .addEventListener("submit", function (event) {
+    alert("submitted!");
+  });
