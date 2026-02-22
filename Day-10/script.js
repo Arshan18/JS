@@ -85,5 +85,5 @@ document
   .getElementById("toggleHighlight")
   .addEventListener("click", function () {
     let descriptionText = document.getElementById("descriptionText");
-    descriptionText.classList.add("highlight");
+    descriptionText.classList.toggle("highlight");
   });
