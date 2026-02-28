@@ -1,7 +1,7 @@
 function fetchData() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      let success = false;
+      let success = true;
       if (success) {
         resolve("Data Fetch Successfully");
       } else {
@@ -12,5 +12,11 @@ function fetchData() {
 }
 
 fetchData()
-  .then((data) => console.log(data))
+  .then((data) => {
+    console.log(data);
+    return data.toLowerCase();
+  })
+  .then((value) => {
+    console.log(value);
+  })
   .catch((error) => console.error(error));
