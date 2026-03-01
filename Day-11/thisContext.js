@@ -9,3 +9,6 @@ person.greet();
 
 const greetFunction = person.greet;
 greetFunction();
+
+const boundName = person.greet.bind({ name: "Ash" });
+boundName();
