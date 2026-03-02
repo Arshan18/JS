@@ -17,9 +17,13 @@ function fetchCommentData() {
 async function getBlogData() {
   try {
     console.log("Fetching Blog Data...");
-    const postData = await fetchPostData();
+    const [postData, commentData] = await Promise.all([
+      fetchPostData(),
+      fetchCommentData(),
+    ]);
+    // const postData = await fetchPostData();
+    // const commentData = await fetchCommentData();
     console.log(postData);
-    const commentData = await fetchCommentData();
     console.log(commentData);
     console.log("Fetch Complete");
   } catch (error) {
