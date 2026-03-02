@@ -14,7 +14,7 @@ async function getUserInfo() {
     console.log("Fetching user data...");
     const userInfo = await fetchUserInfo();
     console.log("UserInfo: ", userInfo);
-    console.log("User data fetch successfully");
+    console.log("User data fetch successfully.");
   } catch (error) {
     console.log("Error fetching data");
   }
