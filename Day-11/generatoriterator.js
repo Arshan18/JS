@@ -5,4 +5,6 @@ function* numberGenerator() {
 }
 
 let gen = numberGenerator();
-console.log(gen);
+console.log(gen.next().value);
+console.log(gen.next().value);
+console.log(gen.next().value);
