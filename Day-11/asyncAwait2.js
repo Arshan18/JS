@@ -30,5 +30,4 @@ async function getBlogData() {
     console.error("Error Fetching Blog Data", error);
   }
 }
-
 getBlogData();

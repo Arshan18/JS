@@ -16,7 +16,7 @@ async function getUserInfo() {
     console.log("UserInfo: ", userInfo);
     console.log("User data fetch successfully.");
   } catch (error) {
-    console.log("Error fetching data");
+    console.log("Error fetching data", error);
   }
 }
 getUserInfo();
