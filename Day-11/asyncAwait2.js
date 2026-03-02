@@ -18,7 +18,9 @@ async function getBlogData() {
   try {
     console.log("Fetching Blog Data...");
     const postData = await fetchPostData();
+    console.log(postData);
     const commentData = await fetchCommentData();
+    console.log(commentData);
     console.log("Fetch Complete");
   } catch (error) {
     console.error("Error Fetching Blog Data", error);
