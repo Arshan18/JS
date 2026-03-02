@@ -5,6 +5,12 @@ function* numberGenerator() {
 }
 
 let gen = numberGenerator();
+let genTwo = numberGenerator();
+
 console.log(gen.next().value);
 console.log(gen.next().value);
 console.log(gen.next().value);
+console.log(gen.next().value);
+
+console.log(genTwo.next().value);
+console.log(genTwo.next().value);
