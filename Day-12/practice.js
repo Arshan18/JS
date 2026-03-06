@@ -28,4 +28,17 @@ function simulateMultipleTasks() {
   }, 3000);
 }
 
-simulateMultipleTasks();
+//
+
+// Create a function fetchDataWithCallback(callback) that simulates fetching data asynchronously using setTimeout (after 2 seconds).Once the data is “fetched”, it should invoke the provided callback function with "Fetched data" as an argument.
+
+function fetchDataWithCallback(callback) {
+  setTimeout(() => {
+    let data = "Fetched data";
+    callback(data);
+  }, 2000);
+}
+
+fetchDataWithCallback(function (result) {
+  console.log(result);
+});
