@@ -39,6 +39,20 @@ function fetchDataWithCallback(callback) {
   }, 2000);
 }
 
-fetchDataWithCallback(function (result) {
-  console.log(result);
-});
+// fetchDataWithCallback(function (result) {
+//   console.log(result);
+// });
+
+// Create a function createCounter() that returns a function which increments and returns a counter value each time it is called.
+
+function createCounter() {
+  let counter = 0;
+  return function () {
+    counter++;
+    return counter;
+  };
+}
+
+let increment = createCounter();
+console.log(increment());
+console.log(increment());
