@@ -78,9 +78,37 @@ function greet(name) {
 
 const limitedGreet = rateLimiter(greet, 3000);
 
-console.log(limitedGreet("Arshan"));
-console.log(limitedGreet("Arshan"));
+// console.log(limitedGreet("Arshan"));
+// console.log(limitedGreet("Arshan"));
 
 setTimeout(() => {
-  console.log(limitedGreet("Arshan"));
+  // console.log(limitedGreet("Arshan"));
 }, 3100);
+
+// Write a function memoize(fn) that returns a memoized version of fn. The memoized function should cache the results of function calls, and return the cached result if the same inputs are provided again.
+
+function memoize(fn) {
+  const cache = {};
+  return function (...args) {
+    const key = JSON.stringify(args);
+    if (key in cache) {
+      return cache[key];
+    } else {
+      const result = fn(...args);
+
+      cache[key] = result;
+
+      return result;
+    }
+  };
+}
+
+function add(a, b) {
+  console.log("Calculating");
+  return a + b;
+}
+
+const memoizedAdd = memoize(add);
+
+console.log(memoizedAdd(2, 3));
+console.log(memoizedAdd(2, 3));
