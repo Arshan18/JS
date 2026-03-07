@@ -104,11 +104,37 @@ function memoize(fn) {
 }
 
 function add(a, b) {
-  console.log("Calculating");
+  // console.log("Calculating");
   return a + b;
 }
 
 const memoizedAdd = memoize(add);
 
-console.log(memoizedAdd(2, 3));
-console.log(memoizedAdd(2, 3));
+// console.log(memoizedAdd(2, 3));
+// console.log(memoizedAdd(2, 3));
+
+// Create a constructor Animal with a method makeSound(). Then create a constructor Dog that inherits from Animal and adds a method bark()
+
+function Animal(name) {
+  this.name = name;
+}
+
+Animal.prototype.makeSound = function () {
+  console.log(this.name + " make a sound");
+};
+
+function Dog(name, breed) {
+  Animal.call(this, name);
+  this.breed = breed;
+}
+Dog.prototype = Object.create(Animal.prototype);
+Dog.prototype.constructor = Dog;
+
+Dog.prototype.bark = function () {
+  console.log(this.name + " is barking");
+};
+
+const myDog = new Dog("Tommy", "labrador");
+
+myDog.makeSound();
+myDog.bark();
