@@ -120,7 +120,7 @@ function Animal(name) {
 }
 
 Animal.prototype.makeSound = function () {
-  console.log(this.name + "Makes a sound");
+  // console.log(this.name + "Makes a sound");
 };
 
 function Dog(name) {
@@ -131,11 +131,40 @@ Dog.prototype = Object.create(Animal.prototype);
 Dog.prototype.constructor = Dog;
 
 Dog.prototype.bark = function () {
-  console.log(this.name + "is barking");
+  // console.log(this.name + "is barking");
 };
 
 const myDog = new Dog("Rocky");
 
-myDog.makeSound();
+// myDog.makeSound();
 
-myDog.bark();
+// myDog.bark();
+
+// Create a constructor function Shape that takes color as a parameter and has a method getColor() that returns the color.    Create another constructor Rectangle that inherits from Shape and adds properties width and height. Add a method getArea() to Rectangle that returns the area of the rectangle
+
+function Shape(color) {
+  this.color = color;
+}
+
+Shape.prototype.getColor = function () {
+  console.log(this.color + "Color");
+};
+
+function Rectangle(color, width, height) {
+  Shape.call(this, color);
+
+  this.width = width;
+  this.height = height;
+}
+
+Rectangle.prototype = Object.create(Shape.prototype);
+Rectangle.prototype.constructor = Rectangle;
+
+Rectangle.prototype.getArea = function () {
+  return this.width * this.height;
+};
+
+const rect = new Rectangle("Green", 10, 6);
+
+rect.getColor();
+console.log(rect.getArea());
