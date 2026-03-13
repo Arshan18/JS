@@ -120,21 +120,22 @@ function Animal(name) {
 }
 
 Animal.prototype.makeSound = function () {
-  console.log(this.name + " make a sound");
+  console.log(this.name + "Makes a sound");
 };
 
-function Dog(name, breed) {
+function Dog(name) {
   Animal.call(this, name);
-  this.breed = breed;
 }
+
 Dog.prototype = Object.create(Animal.prototype);
 Dog.prototype.constructor = Dog;
 
 Dog.prototype.bark = function () {
-  console.log(this.name + " is barking");
+  console.log(this.name + "is barking");
 };
 
-const myDog = new Dog("Tommy", "labrador");
+const myDog = new Dog("Rocky");
 
 myDog.makeSound();
+
 myDog.bark();
