@@ -174,13 +174,25 @@ const rect = new Rectangle("Green", 10, 6);
 const person = {
   name: "Arshan",
   introduce: function () {
-    return `Hello, my name is ${this.name}`;
+    // return `Hello, my name is ${this.name}`;
   },
 };
 
 function greet(fn) {
-  console.log(fn());
+  // console.log(fn());
 }
 const boundIntroduce = person.introduce.bind(person);
 
-greet(boundIntroduce);
+// greet(boundIntroduce);
+
+// Write a function introduce() that uses the this keyword to introduce a person by name. Then, invoke introduce() using call() to introduce different people with the same function.
+
+function introduce() {
+  console.log(`Hi, my name is ${this.name}`);
+}
+
+const person1 = { name: "Arshan" };
+const person2 = { name: "Ash" };
+
+introduce.call(person1);
+introduce.call(person2);
