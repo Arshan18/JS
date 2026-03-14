@@ -147,7 +147,7 @@ function Shape(color) {
 }
 
 Shape.prototype.getColor = function () {
-  console.log(this.color + "Color");
+  // console.log(this.color + "Color");
 };
 
 function Rectangle(color, width, height) {
@@ -161,10 +161,26 @@ Rectangle.prototype = Object.create(Shape.prototype);
 Rectangle.prototype.constructor = Rectangle;
 
 Rectangle.prototype.getArea = function () {
-  return this.width * this.height;
+  // return this.width * this.height;
 };
 
 const rect = new Rectangle("Green", 10, 6);
 
-rect.getColor();
-console.log(rect.getArea());
+// rect.getColor();
+// console.log(rect.getArea());
+
+// Create an object person with properties name and a method introduce(). Use the bind() method to ensure the method works correctly when passed to another function.
+
+const person = {
+  name: "Arshan",
+  introduce: function () {
+    return `Hello, my name is ${this.name}`;
+  },
+};
+
+function greet(fn) {
+  console.log(fn());
+}
+const boundIntroduce = person.introduce.bind(person);
+
+greet(boundIntroduce);

@@ -1,14 +1,33 @@
+// const person = {
+//   name: "Arshan",
+//   greet() {
+//     console.log(`Hi, I am ${this.name}`);
+//   },
+// };
+
+// person.greet();
+
+// const greetFunction = person.greet;
+// greetFunction();
+
+// const boundName = person.greet.bind({ name: "Ash" });
+// boundName();
+
+// function that receives another function
+function greet(fn) {
+  console.log(fn());
+}
+
 const person = {
   name: "Arshan",
-  greet() {
-    console.log(`Hi, I am ${this.name}`);
+
+  introduce() {
+    return `Hello, my name is ${this.name}`;
   },
 };
 
-person.greet();
+// bind ensures 'this' refers to person
+const boundIntroduce = person.introduce.bind(person);
 
-const greetFunction = person.greet;
-greetFunction();
-
-const boundName = person.greet.bind({ name: "Ash" });
-boundName();
+// passing function
+greet(boundIntroduce);
