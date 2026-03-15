@@ -200,11 +200,36 @@ const person2 = { name: "Ash" };
 // Create a function sum() that accepts two numbers and uses this to access a multiplier value. Then, invoke sum() with different contexts using apply(), passing the numbers as an array.
 
 function sum(a, b) {
-  return (a + b) * this.multiplier;
+  // return (a + b) * this.multiplier;
 }
 
 const num1 = { multiplier: 2 };
 const num2 = { multiplier: 3 };
 
-console.log(sum.apply(num1, [10, 5]));
-console.log(sum.apply(num2, [10, 5]));
+// console.log(sum.apply(num1, [10, 5]));
+// console.log(sum.apply(num2, [10, 5]));
+
+// Create two functions fetchUser() and fetchPosts(), both returning promises that resolve in 1 second. Use async-await and Promise.all to fetch both simultaneously and log the results as part of fetchAllData()
+
+function fetchUser() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("User data");
+    }, 1000);
+  });
+}
+
+function fetchPosts() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("Posts data");
+    }, 1000);
+  });
+}
+
+async function fetchAllData() {
+  const [user, posts] = await Promise.all([fetchUser(), fetchPosts()]);
+  console.log(user);
+  console.log(posts);
+}
+fetchAllData();
