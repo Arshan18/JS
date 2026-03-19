@@ -324,8 +324,34 @@ function rangeIterator(start, end) {
 
 const it = rangeIterator(1, 4);
 
-console.log(it.next().value);
-console.log(it.next().value);
-console.log(it.next().value);
-console.log(it.next().value);
-console.log(it.next().value);
+// console.log(it.next().value);
+// console.log(it.next().value);
+// console.log(it.next().value);
+// console.log(it.next().value);
+// console.log(it.next().value);
+
+// Create a generator function fibonacciGenerator() that yields numbers from the Fibonacci sequence indefinitely (1, 1, 2, 3, 5, 8, etc.).Use the next() method to get the next Fibonacci number.
+
+function* fibonacciGenerator() {
+  let a = 1,
+    b = 1;
+  yield a;
+  yield b;
+  while (true) {
+    let next = a + b;
+    yield next;
+    a = b;
+    b = next;
+  }
+}
+
+let fib = fibonacciGenerator();
+
+console.log(fib.next().value);
+console.log(fib.next().value);
+console.log(fib.next().value);
+console.log(fib.next().value);
+console.log(fib.next().value);
+console.log(fib.next().value);
+console.log(fib.next().value);
+console.log(fib.next().value);
