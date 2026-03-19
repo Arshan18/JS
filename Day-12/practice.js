@@ -296,6 +296,36 @@ function* numberGenerator() {
 
 let gen = numberGenerator();
 
-console.log(gen.next().value);
-console.log(gen.next().value);
-console.log(gen.next().value);
+// console.log(gen.next().value);
+// console.log(gen.next().value);
+// console.log(gen.next().value);
+
+// Create a custom iterator called rangeIterator(start, end) that returns an object that iterates over numbers from start to end. Each call to .next() should return the next number in the range until it reaches end.
+
+function rangeIterator(start, end) {
+  let current = start;
+
+  return {
+    next: function () {
+      if (current <= end) {
+        return {
+          value: current++,
+          done: false,
+        };
+      } else {
+        return {
+          value: undefined,
+          done: true,
+        };
+      }
+    },
+  };
+}
+
+const it = rangeIterator(1, 4);
+
+console.log(it.next().value);
+console.log(it.next().value);
+console.log(it.next().value);
+console.log(it.next().value);
+console.log(it.next().value);
