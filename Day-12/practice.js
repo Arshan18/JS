@@ -229,7 +229,39 @@ function fetchPosts() {
 
 async function fetchAllData() {
   const [user, posts] = await Promise.all([fetchUser(), fetchPosts()]);
-  console.log(user);
-  console.log(posts);
+  // console.log(user);
+  // console.log(posts);
 }
-fetchAllData();
+// fetchAllData();
+
+// Write two functions fetchSuccess() and fetchFailure(), where fetchSuccess() returns a promise that resolves successfully after 1 second, and fetchFailure() returns a promise that rejects with an error after 1 second.Create a function handlePromises() that calls both functions using Promise.all and handles success and failure cases.
+
+function fetchSuccess() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("resolves succesfully");
+    }, 1000);
+  });
+}
+
+function fetchFailure() {
+  return new Promise((_, reject) => {
+    setTimeout(() => {
+      reject("Error occurred");
+    }, 1000);
+  });
+}
+
+async function handlePromises() {
+  try {
+    const [success, failure] = await Promise.all([
+      fetchSuccess(),
+      fetchFailure(),
+    ]);
+    console.log(success);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+handlePromises();
