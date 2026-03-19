@@ -284,4 +284,18 @@ const slowPromise = new Promise((resolve) => {
   }, 3000);
 });
 
-fetchWithTimeout(slowPromise, 1000).then((result) => console.log(result));
+// fetchWithTimeout(slowPromise, 1000).then((result) => console.log(result));
+
+// Create a generator function numberGenerator() that yields numbers from 1 to 3.
+
+function* numberGenerator() {
+  yield 1;
+  yield 2;
+  yield 3;
+}
+
+let gen = numberGenerator();
+
+console.log(gen.next().value);
+console.log(gen.next().value);
+console.log(gen.next().value);
