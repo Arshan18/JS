@@ -258,10 +258,30 @@ async function handlePromises() {
       fetchSuccess(),
       fetchFailure(),
     ]);
-    console.log(success);
+    // console.log(success);
   } catch (error) {
-    console.log(error);
+    // console.log(error);
   }
 }
 
-handlePromises();
+// handlePromises();
+
+// Create a function fetchWithTimeout(promise, timeout) that takes a promise and a timeout value in milliseconds. Use Promise.race() to return the result of the promise if it resolves within the timeout, otherwise return "Timeout exceeded".
+
+function fetchWithTimeout(promise, timeout) {
+  const timeoutPromise = new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("Timeout exceeded");
+    }, timeout);
+  });
+
+  return Promise.race([promise, timeoutPromise]);
+}
+
+const slowPromise = new Promise((resolve) => {
+  setTimeout(() => {
+    resolve("Data Fetched Succesfully");
+  }, 3000);
+});
+
+fetchWithTimeout(slowPromise, 1000).then((result) => console.log(result));
